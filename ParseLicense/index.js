@@ -235,6 +235,20 @@ module.exports = async function (context, req) {
             data[prefix + config.field] = value;
             index += length;
 
+            if (!data[prefix+"fullname"]) {
+                data[prefix+"fullname"]=[data[prefix+"firstname"],
+                                         data[prefix+"middlename"]+
+                                         data[prefix+"lastname"]].join(" ");
+            }
+
+            if (!data[prefix+"home_address_street"] && data[prefix+"address_street"]) {
+                data[prefix+"home_address_street"] = data[prefix+"address_street"];
+                data[prefix+"home_address_street2"] = data[prefix+"address_street2"];
+                data[prefix+"home_address_city"] = data[prefix+"address_city"];
+                data[prefix+"home_address_state"] = data[prefix+"address_state"];
+                data[prefix+"home_address_postalcode"] = data[prefix+"address_postal_code"];
+            }
+
             // Get formatted field
             if (config.format) {
                 data[prefix + config.field + "_f"] = config.format(value);
