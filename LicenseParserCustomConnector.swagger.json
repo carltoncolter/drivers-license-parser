@@ -1,0 +1,230 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "LicenseParser",
+    "description": "Drivers License Parser",
+    "version": "1.0"
+  },
+  "host": "myhost.azurewebsites.net",
+  "basePath": "/api/",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/ParseLicense": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "usdl_iin": {
+                  "type": "string",
+                  "description": "usdl_iin"
+                },
+                "usdl_version": {
+                  "type": "string",
+                  "description": "usdl_version"
+                },
+                "usdl_jurisversion": {
+                  "type": "string",
+                  "description": "usdl_jurisversion"
+                },
+                "usdl_entries": {
+                  "type": "string",
+                  "description": "usdl_entries"
+                },
+                "usdl_subfiletype": {
+                  "type": "string",
+                  "description": "usdl_subfiletype"
+                },
+                "usdl_offset": {
+                  "type": "string",
+                  "description": "usdl_offset"
+                },
+                "usdl_length": {
+                  "type": "string",
+                  "description": "usdl_length"
+                },
+                "usdl_juris_endorsement_codes": {
+                  "type": "string",
+                  "description": "usdl_juris_endorsement_codes"
+                },
+                "usdl_expireson": {
+                  "type": "string",
+                  "description": "usdl_expireson"
+                },
+                "usdl_expireson_f": {
+                  "type": "string",
+                  "description": "usdl_expireson_f"
+                },
+                "usdl_lastname": {
+                  "type": "string",
+                  "description": "usdl_lastname"
+                },
+                "usdl_middlename": {
+                  "type": "string",
+                  "description": "usdl_middlename"
+                },
+                "usdl_firstname": {
+                  "type": "string",
+                  "description": "usdl_firstname"
+                },
+                "usdl_bornon": {
+                  "type": "string",
+                  "description": "usdl_bornon"
+                },
+                "usdl_bornon_f": {
+                  "type": "string",
+                  "description": "usdl_bornon_f"
+                },
+                "usdl_sex": {
+                  "type": "string",
+                  "description": "usdl_sex"
+                },
+                "usdl_eyecolor": {
+                  "type": "string",
+                  "description": "usdl_eyecolor"
+                },
+                "usdl_eyecolor_f": {
+                  "type": "string",
+                  "description": "usdl_eyecolor_f"
+                },
+                "usdl_height_in": {
+                  "type": "string",
+                  "description": "usdl_height_in"
+                },
+                "usdl_height_in_f": {
+                  "type": "string",
+                  "description": "usdl_height_in_f"
+                },
+                "usdl_address_street": {
+                  "type": "string",
+                  "description": "usdl_address_street"
+                },
+                "usdl_address_city": {
+                  "type": "string",
+                  "description": "usdl_address_city"
+                },
+                "usdl_address_state": {
+                  "type": "string",
+                  "description": "usdl_address_state"
+                },
+                "usdl_address_postal_code": {
+                  "type": "string",
+                  "description": "usdl_address_postal_code"
+                },
+                "usdl_licensenumber": {
+                  "type": "string",
+                  "description": "usdl_licensenumber"
+                },
+                "usdl_documentdiscriminator": {
+                  "type": "string",
+                  "description": "usdl_documentdiscriminator"
+                },
+                "usdl_issuing_country": {
+                  "type": "string",
+                  "description": "usdl_issuing_country"
+                },
+                "usdl_cardrevisedon": {
+                  "type": "string",
+                  "description": "usdl_cardrevisedon"
+                },
+                "usdl_cardrevisedon_f": {
+                  "type": "string",
+                  "description": "usdl_cardrevisedon_f"
+                },
+                "usdl_limiteddurationdocumentindicator": {
+                  "type": "string",
+                  "description": "usdl_limiteddurationdocumentindicator"
+                },
+                "usdl_compliance_type": {
+                  "type": "string",
+                  "description": "usdl_compliance_type"
+                },
+                "usdl_inventorycontrolnumber": {
+                  "type": "string",
+                  "description": "usdl_inventorycontrolnumber"
+                },
+                "usdl_juris_vehicle_class": {
+                  "type": "string",
+                  "description": "usdl_juris_vehicle_class"
+                }
+              }
+            },
+            "headers": {
+              "Content-Type": {
+                "description": "Content-Type",
+                "type": "string"
+              },
+              "Accept": {
+                "description": "Accept",
+                "type": "string"
+              }
+            }
+          }
+        },
+        "summary": "ParseLicense",
+        "description": "ParseLicense",
+        "operationId": "ParseLicense",
+        "parameters": [
+          {
+            "name": "code",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "default": "myazurefunctionkeyMYAZUREFUNCTIONKEYmyazurefunctionkey%3D%3D"
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": false,
+            "type": "string",
+            "default": "application/json"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "required": false,
+            "type": "string",
+            "default": "application/json"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "string",
+                  "description": "data",
+                  "title": "barcodeData",
+                  "x-ms-visibility": ""
+                }
+              },
+              "required": [
+                "data"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {},
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {
+    "api_key": {
+      "type": "apiKey",
+      "in": "query",
+      "name": "code"
+    }
+  },
+  "security": [],
+  "tags": []
+}
